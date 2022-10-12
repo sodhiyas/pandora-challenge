@@ -14,12 +14,6 @@ To be able to build the api image, you'll need to run:
 ```
 docker-compose build --build-arg COMPANIES_FILE_PATH=/path/to/companies.json --build-arg PEOPLE_FILE_PATH=/path/to/people.json pandora
 ```
-or
-```
-docker build -t pandora-build . --build-arg COMPANIES_FILE_PATH=/path/to/companies.json --build-arg PEOPLE_FILE_PATH=/path/to/people.json
-```
-### Note: If you mix up the 2 paths, data will not be loaded properly
-
 ## Running the API :
 You can run the API by running below cmd:
 ```
