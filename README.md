@@ -5,10 +5,6 @@ Your API must provide these end points:
 - Given a company, the API needs to return all their employees. Provide the appropriate solution if the company does not have any employees.
 - Given 2 people, provide their information (Name, Age, Address, phone) and the list of their friends in common which have brown eyes and are still alive.
 - Given 1 people, provide a list of fruits and vegetables they like. This endpoint must respect this interface for the output: `{"username": "Ahi", "age": "30", "fruits": ["banana", "apple"], "vegetables": ["beetroot", "lettuce"]}`
-## Prerequisites :
-- Docker Engine >= 19.03.0+
-- docker-compose >= 1.10.0
-
 ## Installing Docker and docker-compose :
 - Docker: https://docs.docker.com/get-docker/
 - docker-compose: https://docs.docker.com/compose/install/
