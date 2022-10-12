@@ -21,9 +21,9 @@ docker build -t pandora-build . --build-arg --build-arg COMPANIES_FILE_PATH=/pat
 If you mix up the 2 paths, data will not be loaded properly
 
 ## Running the API :
-You can run the API by running this command:
+You can run the API by running below cmd:
 ```
-docker-compose up (-d) if you want to run in daemon
+docker-compose up -d
 ```
 This command will load data into the data store and the API will deploy on port 5000 of your localhost
 
@@ -32,7 +32,7 @@ This command will load data into the data store and the API will deploy on port 
 - `/users/<string:user_id>` - This endpoint will return some of the user's details including their favourite fruits and vegetables
 - `/users/` - Requiring the query parameters `user1` and `user2` corresponding to user IDs, this will endpoint will return the two user's details and common friends that has brown eyes and are still alive.
 
-## Sample API calls :
+## API calls :
 ### Company API 
 ```
 curl "http://localhost:5000/companies/1"
@@ -41,7 +41,7 @@ curl "http://localhost:5000/companies/1"
 ```
 curl "http://localhost:5000/users/595eeb9b96d80a5bc7afb106"
 ```
-### User API with query parameters
+### User API with query param.
 ```
 curl "http://localhost:5000/users/?user1=595eeb9b96d80a5bc7afb106&user2=595eeb9b1e0d8942524c98ad"
 ```
