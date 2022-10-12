@@ -39,11 +39,16 @@ curl "http://localhost:5000/companies/1"
 ```
 ### User API with ID
 ```
-curl "http://localhost:5000/users/595eeb9b96d80a5bc7afb106"
+curl "http://localhost:5000/users/595eeb9bb3821d9982ea44f9"
 ```
-### User API with query param.
+### User GET API with query param.
+
 ```
-curl "http://localhost:5000/users/?user1=595eeb9b96d80a5bc7afb106&user2=595eeb9b1e0d8942524c98ad"
+"http://localhost:5000/users/?user1=595eeb9bb3821d9982ea44f9&user2=595eeb9bfa3a6e19be68df9e"
+```
+Or use below curl cmd-
+```
+curl "http://localhost:5000/users/?user1=595eeb9bb3821d9982ea44f9&user2=595eeb9bfa3a6e19be68df9e"
 ```
 
 ## Adding more data?
