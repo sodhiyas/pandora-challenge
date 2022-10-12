@@ -71,7 +71,7 @@ docker-compose run --rm --entrypoint ./load_data.sh pandora
 ## Duplicated data :
 Duplicated items are handled appropriately, older record will be updated by the newer record if there are any changes.
 
-## Need new classfications? :
+## New classfications :
 If you need want to add more fruits or vegetables, or basically just want to switch up classifications, you can append or change the `fruits-veg.csv` under the resources directory. You just have to make sure that there are `fruits` or `vegetables` to the food group since it's a main point of classification
 ```
 name,food_group
