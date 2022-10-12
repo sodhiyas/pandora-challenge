@@ -89,3 +89,6 @@ After all these, you can and should clean up after yourself, run these commands 
 docker-compose down  # This cleans up the containers and networks created by docker
 docker rmi pandora-build  # This removes the image built
 ```
+
+## References
+- Food data set (https://github.com/yufree/expodb/blob/master/foodb/foods.csv)
