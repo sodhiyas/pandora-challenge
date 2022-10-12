@@ -1,6 +1,6 @@
 # Pandora Challenge :
 Pandora is a mysterious planet. Those types of planets can support human life, for that reason the president of the Handsome Jack decides to send some people to colonise this new planet and reduce the number of people in their own country. After 10 years, the new president wants to know how the new colony is growing, and wants some information about his citizens. Hence, he hired you to build a rest API to provide the desired information. The government from Pandora will provide you two json files (located at resource folder) which will provide information about all the citizens in Pandora (name, age, friends list, fruits and vegetables they like to eat...) and all founded companies on that planet.Unfortunately, the systems are not that evolved yet, thus you need to clean and organise the data before use. For example, instead of providing a list of fruits and vegetables their citizens like, they are providing a list of favourite food, and you will need to split that list (please, check below the options for fruits and vegetables).
-## New Features
+## New Features :
 Your API must provide these end points:
 - Given a company, the API needs to return all their employees. Provide the appropriate solution if the company does not have any employees.
 - Given 2 people, provide their information (Name, Age, Address, phone) and the list of their friends in common which have brown eyes and are still alive.
@@ -50,7 +50,7 @@ curl "http://localhost:5000/users/595eeb9b96d80a5bc7afb106"
 curl "http://localhost:5000/users/?user1=595eeb9b96d80a5bc7afb106&user2=595eeb9b1e0d8942524c98ad"
 ```
 
-## Adding more data? :
+## Adding more data?
 - Make sure that the dynamoDB container is running
 - Replace or update the companies.json or people.json
 - Run this command, this will add what's in the json files to the dynamo table.:
@@ -59,7 +59,7 @@ docker-compose run --rm --entrypoint ./load_data.sh pandora
 ```
 `--rm` option is just for cleaning up
 
-## Duplicated data? :
+## Duplicated data?
 Duplicated items are handled appropriately, older record will be updated by the newer record if there are any changes.
 
 ## Need new classfications? :
