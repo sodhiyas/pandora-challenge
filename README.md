@@ -33,7 +33,7 @@ This command will load data into the data store and the API will deploy on port 
 - `/users/` - Requiring the query parameters `user1` and `user2` corresponding to user IDs, this will endpoint will return the two user's details and common friends that has brown eyes and are still alive.
 
 ## API calls :
-### Company GET API 
+### Company GET API :
 ```
 http://localhost:5000/companies/4
 ```
@@ -41,7 +41,7 @@ Or use below curl cmd-
 ```
 curl "http://localhost:5000/companies/4"
 ```
-### User GET API with ID
+### User GET API with ID :
 ```
 http://localhost:5000/users/595eeb9bb3821d9982ea44f9
 ```
@@ -49,7 +49,7 @@ Or use below curl cmd-
 ```
 curl "http://localhost:5000/users/595eeb9bb3821d9982ea44f9"
 ```
-### User GET API with query param.
+### User GET API with query param :
 
 ```
 http://localhost:5000/users/?user1=595eeb9bb3821d9982ea44f9&user2=595eeb9bfa3a6e19be68df9e
@@ -59,7 +59,7 @@ Or use below curl cmd-
 curl "http://localhost:5000/users/?user1=595eeb9bb3821d9982ea44f9&user2=595eeb9bfa3a6e19be68df9e"
 ```
 
-## Adding more data?
+## More data addition :
 - Make sure that the dynamoDB container is running
 - Replace or update the companies.json or people.json
 - Run this command, this will add what's in the json files to the dynamo table.:
@@ -68,7 +68,7 @@ docker-compose run --rm --entrypoint ./load_data.sh pandora
 ```
 `--rm` option is just for cleaning up
 
-## Duplicated data?
+## Duplicated data :
 Duplicated items are handled appropriately, older record will be updated by the newer record if there are any changes.
 
 ## Need new classfications? :
@@ -85,7 +85,7 @@ docker-compose run --rm --entrypoint ./run_tests.sh pandora
 ```
 `--rm` option is just for cleaning up
 
-## Cleaning up :
+## Clean up :
 After all these, you can and should clean up after yourself, run these commands only if you want to:
 ```
 docker-compose down  # This cleans up the containers and networks created by docker
