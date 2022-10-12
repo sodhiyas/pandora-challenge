@@ -33,18 +33,26 @@ This command will load data into the data store and the API will deploy on port 
 - `/users/` - Requiring the query parameters `user1` and `user2` corresponding to user IDs, this will endpoint will return the two user's details and common friends that has brown eyes and are still alive.
 
 ## API calls :
-### Company API 
+### Company GET API 
 ```
-curl "http://localhost:5000/companies/1"
+http://localhost:5000/companies/4
 ```
-### User API with ID
+Or use below curl cmd-
+```
+curl "http://localhost:5000/companies/4"
+```
+### User GET API with ID
+```
+http://localhost:5000/users/595eeb9bb3821d9982ea44f9
+```
+Or use below curl cmd-
 ```
 curl "http://localhost:5000/users/595eeb9bb3821d9982ea44f9"
 ```
 ### User GET API with query param.
 
 ```
-"http://localhost:5000/users/?user1=595eeb9bb3821d9982ea44f9&user2=595eeb9bfa3a6e19be68df9e"
+http://localhost:5000/users/?user1=595eeb9bb3821d9982ea44f9&user2=595eeb9bfa3a6e19be68df9e
 ```
 Or use below curl cmd-
 ```
