@@ -2,18 +2,17 @@
 Load data into datastore
 """
 import argparse
-
-import boto3
 import numpy as np
 import pandas as pd
+import boto3
 
 DYNAMO_RESOURCE = boto3.resource(
+    endpoint_url='http://dynamodb-local:8000',
     service_name='dynamodb',
-    region_name='ap-southeast-2',
-    endpoint_url='http://dynamodb-local:8000'
+    region_name='ap-southeast-2'
 )
-TABLE_NAME = 'PandoraDetails'
-FRUITS_VEG_LIST = pd.read_csv('/opt/pandora/resources/fruits-veg.csv')
+TABLE_NAME = 'Pandora'
+FRUITS_VEG_LIST = pd.read_csv('resources/fruits-veg.csv')
 
 
 def create_table():
@@ -115,7 +114,7 @@ def vector_operations(columns=[], **kwargs):
 
 
 def load_people(path):
-    """Load people json file into datastore."""
+    """Into datastore load people json file"""
     print('Loading people data from: ', path)
     table = DYNAMO_RESOURCE.Table(TABLE_NAME)
     dframe = pd.read_json(path, orient='records')

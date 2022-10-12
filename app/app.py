@@ -17,19 +17,13 @@ DYNAMO_RESOURCE = boto3.resource(
     region_name='ap-southeast-2',
     endpoint_url='http://dynamodb-local:8000'
 )
-DDB_TABLE = DYNAMO_RESOURCE.Table('PandoraDetails')
+DDB_TABLE = DYNAMO_RESOURCE.Table('Pandora')
 app = Flask(__name__)
 
 
 class CompanyAPI(MethodView):
-    """Class-based view for the company API."""
-
     def get(self, company_id):
-        """
-        Retrieve company details.
 
-        Retrieve a company's list of users.
-        """
         payload = {}
         try:
             user_details = [
@@ -68,7 +62,6 @@ class CompanyAPI(MethodView):
 
 
 class UserAPI(MethodView):
-    """Class-based view for the user API."""
 
     lsi_key_combinations = [
         'True#True', 'True#False', 'False#True', 'False#False'

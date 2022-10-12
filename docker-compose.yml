@@ -16,8 +16,8 @@ services:
         volumes:
             - ./resources:/opt/pandora/resources
         environment:
-            - AWS_ACCESS_KEY_ID='MY_ACCESS_KEY'
-            - AWS_SECRET_ACCESS_KEY='MY_SECRET_KEY'
+            - AWS_ACCESS_KEY_ID='ACCESS_KEY'
+            - AWS_SECRET_ACCESS_KEY='SECRET_KEY'
             - FLASK_APP=/opt/pandora/app/app.py
             - FLASK_ENV=development
         ports:
