@@ -16,7 +16,7 @@ docker-compose build --build-arg COMPANIES_FILE_PATH=/path/to/companies.json --b
 ```
 or
 ```
-docker build -t pandora-build . --build-arg --build-arg COMPANIES_FILE_PATH=/path/to/companies.json --build-arg PEOPLE_FILE_PATH=/path/to/people.json
+docker build -t pandora-build . --build-arg COMPANIES_FILE_PATH=/path/to/companies.json --build-arg PEOPLE_FILE_PATH=/path/to/people.json
 ```
 If you mix up the 2 paths, data will not be loaded properly
 
